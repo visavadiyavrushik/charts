@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { CardHeader, CardTitle, Col, Row, Card } from "reactstrap";
+import "./App.css";
+import GoalOverview from "./GoalOverview";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card>
+        <CardHeader>
+          <CardTitle tag="h2">Chart Overview</CardTitle>
+        </CardHeader>
+      </Card>
+      <Row>
+        <Col xs="6">
+          <GoalOverview />
+        </Col>
+        <Col xs="6">
+          <GoalOverview />
+        </Col>
+      </Row>
     </div>
   );
 }
